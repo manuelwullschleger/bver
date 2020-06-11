@@ -1,17 +1,7 @@
 Layer 1 complete. Match: 0.6867523542886231
-Print error detected. Stopping print..
 Layer 2 complete. Match: 0.6108853659932467
-Print error detected. Stopping print..
 Layer 3 complete. Match: 0.5917966619395658
-Print error detected. Stopping print..
 Layer 4 complete. Match: 0.5694335477796957
-Print error detected. Stopping print..
 Layer 5 complete. Match: 0.5585431064924582
-Print error detected. Stopping print..
 Layer 6 complete. Match: 0.5475108700962431
 Print error detected. Stopping print..
-Layer 7 complete. Match: 0.5339132088026998
-Print error detected. Stopping print..
-Layer 8 complete. Match: 0.5232126276694522
-Print error detected. Stopping print..
-Layer 9 complete. Match: 0.5209640745793542

@@ -1,6 +1,5 @@
 # 3D-PrintMonitoring
 
-
 Die meisten FDM-3D-Drucker besitzen keine Fehlerüberwachung, auch wenn einen Druckfehler auftritt, wird weiter gedruckt und somit Filament verschwendet oder der Drucker kann beschädigt werden. Ziel des Projektes ist es die Qualität eines FDM-3D-Drucks durch eine Kamera live zu überwachen, um so den Druck beim Auftreten eines Fehlers automatisiert pausieren oder abbrechen zu können. 
 
 ## Voraussetzungen

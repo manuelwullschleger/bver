@@ -10,7 +10,7 @@ import numpy as np
 import random 
 import matplotlib.pyplot as plt
 class ImageProcessor:
-    DEBUG = 1 #set to True to show every step
+    DEBUG = 0 #set to True to show every step
     emptyPrinterImage = None
     def __init__(self, emptyPrinterImage):
         self.emptyPrinterImage = emptyPrinterImage
