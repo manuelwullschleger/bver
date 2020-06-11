@@ -22,10 +22,6 @@ class PrintMonitoring:
         self.videoSource = videoSource
         self.usePreRecordedVideo = usePreRecordedVideo
         self.frameRateInFPS = frameRateInFPS
-
-    def trackercallback(self, x,xx=None):
-        nothing = True
-        return nothing
     
     def getImage(self, drawRegions = False, cutToRoi = False):
         cam = cv2.VideoCapture(self.videoSource)
@@ -63,15 +59,6 @@ class PrintMonitoring:
     def trackPrint(self, layerDoneCallback, config):
         cap = cv2.VideoCapture(self.videoSource)
         frameCounter = 0
-
-        cv2.namedWindow("vals")
-        cv2.createTrackbar("lh", "vals", 35, 255, self.trackercallback)
-        cv2.createTrackbar("ls", "vals", 44, 255, self.trackercallback)
-        cv2.createTrackbar("lv", "vals", 85, 255, self.trackercallback)
-        cv2.createTrackbar("uh", "vals", 75, 255, self.trackercallback)
-        cv2.createTrackbar("us", "vals", 255, 255, self.trackercallback)
-        cv2.createTrackbar("uv", "vals", 255, 255, self.trackercallback)
-
         ret, frame = cap.read()
         printState = PrintState.STARTING
         headInRoi = False
@@ -83,15 +70,8 @@ class PrintMonitoring:
         while(cap.isOpened()):
             ret, frame = cap.read()
             hsv =  cv2.cvtColor(frame, cv2.COLOR_BGR2HSV)
-            lh = cv2.getTrackbarPos("lh", "vals")
-            ls = cv2.getTrackbarPos("ls", "vals")
-            lv = cv2.getTrackbarPos("lv", "vals")
-            lower = (lh, ls, lv)
-
-            uh = cv2.getTrackbarPos("uh", "vals")
-            us = cv2.getTrackbarPos("us", "vals")
-            uv = cv2.getTrackbarPos("uv", "vals")
-            upper = (uh, us, uv)
+            lower = (35, 44, 85)
+            upper = (75, 255, 255)
 
             binary = cv2.inRange(hsv, lower, upper)
             cv2.erode(binary, np.ones((5,5), np.uint8), dst=binary, iterations=3)

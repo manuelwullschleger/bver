@@ -88,9 +88,27 @@ Um die Überwachung mit einem Video zu testen, kann folgender Befehl ausgeführt
 $ python main.py -v "C:\path\to\video.mp4" -g "C:\path\to\gocodefile.gcode" -s
 ```
 
-## Running the tests
+## Durchführen der Tests
+Um das Tool zu testen wurden verschiedene GCodes mit dazugehörigen Aufnahmen des Druckes angefertigt.
+Um ein Video zu testen muss folgendermassen vorgegangen werden:
 
-Explain how to run the automated tests for this system
+  1: Testen der Bildquelle:
+  ```
+  $ python main.py -v "path\to\video.mp4" -t
+  ```
+
+  2: Konfigurieren der Regionen:
+  ```
+  $ python main.py -v "path\to\video.mp4" -c
+  ```
+  
+  3: Starten des Monitorings
+  ```
+  $ python main.py -v "C:\path\to\video.mp4" -g "C:\path\to\gocodefile.gcode" -s
+  ```
+  (Um alle Bildverarbeitungsschritte auszugeben, kann die Variable DEBUG in der Datei imageprocessing.py auf TRUE gesetzt werden)
+  Alle Ist-und Soll-Bilder werden gespeichert. Die berechnete Übereinstimmung wird jeweils auf der Konsole ausgegeben.
+
 
 
 ## Autoren

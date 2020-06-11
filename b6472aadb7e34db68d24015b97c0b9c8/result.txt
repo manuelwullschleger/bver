@@ -1,0 +1,8 @@
+Layer 1 complete. Match: 0.9769765421372719
+Layer 2 complete. Match: 0.9133763094278807
+Layer 3 complete. Match: 0.8863819500402901
+Layer 4 complete. Match: 0.9004834810636584
+Layer 5 complete. Match: 0.8618592528236316
+Layer 6 complete. Match: 0.8310165073848828
+Layer 7 complete. Match: 0.8006081668114683
+Layer 8 complete. Match: 0.26965312881296855

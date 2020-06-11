@@ -126,7 +126,7 @@ def layerDone(layerNumber, istImage, config):
         print("Layer " + str(layerNumber) + " complete. No match found")
         match = 0
 
-    if(match < 0.85):
+    if(match < 0.55):
         stop = True
         print("Print error detected. Stopping print..")
         #stop print here, not implemented yet

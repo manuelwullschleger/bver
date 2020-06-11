@@ -10,7 +10,7 @@ import numpy as np
 import random 
 import matplotlib.pyplot as plt
 class ImageProcessor:
-    DEBUG = 0 #set to True to show every step
+    DEBUG = 1 #set to True to show every step
     emptyPrinterImage = None
     def __init__(self, emptyPrinterImage):
         self.emptyPrinterImage = emptyPrinterImage
@@ -33,7 +33,7 @@ class ImageProcessor:
         im_empty = emptyPrinterImage
         mask = cv2.Canny(im_empty, 100, 200)
         # - dilate mask
-        kernel = np.ones((80, 80),np.uint8)
+        kernel = np.ones((90, 90),np.uint8)
         mask = cv2.dilate(mask,kernel,iterations = 1)
         mask =  cv2.bitwise_not(mask)
         return mask
@@ -122,7 +122,9 @@ class ImageProcessor:
 
             diff, _ = self.cropToBBox(diff)
             x,y = diff.shape
-            match = 1-((1/(x*y))*np.count_nonzero(diff > 0))
+
+            match = 1 - (1/np.count_nonzero(matchingTemplate))*np.count_nonzero(diff)
+
             return (True, match)
         else:
             #no match found
